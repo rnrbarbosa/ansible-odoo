@@ -1,0 +1,5 @@
+ - name: Drop Config for supervisord into the conf.d directory
+   copy: src=odoo.conf dest=/etc/supervisor/conf.d/odoo.conf
+
+ - name: reread supervisord
+   shell: /usr/bin/supervisorctl reread && /usr/bin/supervisorctl update

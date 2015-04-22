@@ -1,0 +1,5 @@
+- include: dependencies.yml
+- include: odoo.yml
+- include: supervisor.yml
+- include: db.yml
+- include: options.yml

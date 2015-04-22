@@ -1,0 +1,8 @@
+- name: create odoo user
+  user: name=odoo
+- name: install git
+  apt: pkg=git state=present
+- name: send key to remote deploy user
+  copy: src=files/private_key dest=~/.ssh/priv_key
+- name: checkout odoo from github
+  git: repo=git://github.com/odoo/odoo.git dest=/opt/odoo version={{ odoo.version }} accept_hostkey=yes

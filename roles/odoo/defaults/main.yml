@@ -1,0 +1,10 @@
+site:
+  domain: domain.tld
+
+odoo:
+  version: 7.0
+  db_host: False
+  db_port: False
+  db_user: odoo
+  db_password: False
+  workers: 4
